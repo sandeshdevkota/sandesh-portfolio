@@ -1,0 +1,1774 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" > -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>SANDESH-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="https://www.dafont.com/search.php?q=classy"></script>
+    <link rel="stylesheet" href="https://www.dafont.com/chatime.font">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/media.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+    }
+html {
+  scroll-behavior: smooth;
+}
+
+    body {
+        background-color: #191d2b;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1rem;
+        color: #FFFFFF;
+        transition: all 0.4s ease-in-out;
+        overflow-x: hidden;
+    }
+    /* Scrollbar Transparent */
+::-webkit-scrollbar {
+width: 0px;
+background: transparent; /* make scrollbar transparent */
+}
+
+    /* NAV BAR CSS */
+    .nav-bar-button {
+        position: fixed;
+        z-index: 100000000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4%;
+        top: 18%;
+    }
+
+    .nav-bar-button i {
+        font-size: 1.2rem;
+        color: #b2becd;
+        pointer-events: none;
+    }
+
+    .nav-bar-button button {
+        padding: 1rem;
+        cursor: pointer;
+        background-color: #454e56;
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.7rem 0;
+        box-shadow: 0 3px 15px rgba(0,0,0,.3);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    /* Active button style */
+    .nav-bar-button button.active {
+        background-color: #27AE60;
+    }
+    .nav-bar-button button.active i {
+        color: #FFFFFF;
+    }
+
+/* HOME PAGE START */
+#content1{
+overflow-x: hidden !important;
+overflow-y: hidden !important;
+height: 600px;
+}
+.content1{overflow-y: hidden !important;}
+.header-content{
+user-select: none; /* Non-prefixed version, currently supported by most browsers */
+-webkit-touch-callout: none; /* iOS Safari */
+overflow: hidden;
+}
+header{
+max-height: max-content;
+}
+/* #home {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out; 
+} */
+/* shape style  */
+
+.h-shape {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -12%;
+  margin-left: 120%;
+  border-left: 350px solid transparent;
+  border-right: 350px solid transparent;
+  border-bottom: 500px solid #27AE60; 
+  transform-origin: top left; /* Sets the origin of the rotation */
+transform: translate(-50%, -50%) rotate(50deg); /* Rotates the rectangle 45 degrees */
+  z-index: 9999;
+}
+.t-shape{
+position: absolute;
+ width: 0;
+ height: 0;
+ margin-top: 18.3%;
+ margin-left: 72%;
+ border-left: 350px solid transparent;
+ border-right: 350px solid transparent;
+ border-bottom: 400px solid #27AE60; 
+ z-index: 9999;
+}
+
+.box-shape{
+background-color: #313336;
+width: 450px;
+height: 400px;
+top: 18%;
+left: 60%;
+justify-content: center;
+border-radius: 15%;
+position: absolute;
+opacity: 80%;
+}
+.image img{
+position:absolute;
+height: 640px;
+top: -19%;
+left: 55.4%;
+}
+/* style for text */
+.left-header{
+margin-left: 15%;
+margin-top: 9%;
+}
+.left-header p{
+font-family:'Michelle';
+width: 410px;
+margin: 1.5rem 0;
+line-height: 1.5rem;
+letter-spacing: 1px;
+}
+.name{
+font-size: 65px;
+font-weight: 100px;
+/* font-family: "Poppins", sans-serif; */
+font-family:"michelle" !important;
+line-height: 1.7cm;
+margin-bottom: 2%;
+}
+.text-span{
+color: #27AE60;
+letter-spacing: .15em; /* Adjust as needed */
+}
+.btn-con{
+  border-radius: 50px;
+  padding: 0.1rem;
+  width: 200px;
+  padding-right: 0px;
+  margin-top: 10px;
+  color: white;
+  font-weight: 600;
+  border: 1px solid #27AE60;
+  align-self: flex-start;
+  align-items: center;
+  overflow-y: hidden;
+  text-decoration: none;
+  background: linear-gradient(to left, #191d2b 0%, #191d2b 50%, #27AE60 50%, #89b73d 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 1s ease;
+  
+}
+.btn-con i{
+    /* margin-left: 10px; */
+    background-color: #27AE60;
+    border-radius: 50%;
+    width: 45px;
+    height: 50px;
+    margin-left: 5.5%;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.btn-con a{
+    padding-left: 15.5px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.btn-con:hover {
+    background-position: 0 0;
+    background-color: #27AE60 !important;
+}
+ 
+/* Apply animation to the text */
+.container-text{
+display: inline-flex;
+}
+.container-text h1 {
+font-size: 3.5rem;
+letter-spacing: 5px;
+}
+.type {
+display:inline-block;
+vertical-align: bottom;
+margin-left: 10px;
+}
+
+.type > span {
+color: #14f3db;
+display:grid;
+overflow: hidden;
+height:1.2em;
+position: absolute;
+letter-spacing: 10px;
+font-size: 3.5rem;
+}
+
+.type span span {
+width:0%;
+max-width:max-content;
+overflow: hidden;
+height:inherit;
+word-break:break-all;
+animation:
+c 0.5s infinite steps(1),
+t 2s linear infinite alternate,
+m 16s steps(4) infinite;
+}
+.type span span:before {
+content:" ";
+display:inline-block;
+}
+
+@keyframes t{
+90%,100% {width:100%}
+}
+
+@keyframes c{
+0%,100%{box-shadow:5px 0 0 #0000}
+50%    {box-shadow:5px 0 0 orangered}
+}
+
+@keyframes m{
+100% {transform:translateY(-400%)}
+}
+
+.hide-animation {
+display: none;
+}
+
+
+/* ANIMATION FROM TOP FOR LEFT HEADER */
+.name {
+position: relative;
+top: -100vh;
+animation: slideIn 2s forwards;
+} 
+
+/* Keyframes for the slide-in animation */
+@keyframes slideIn {
+to {
+    top: 0;
+}
+}
+.left-header p{
+opacity: 0;
+transform: translateX(-100%);
+animation: slideFromLeft 3s forwards;
+}
+
+@keyframes slideFromLeft {
+from {
+    opacity: 0;
+    transform: translateX(-30%);
+}
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+.btn-con {
+opacity: 0;
+animation: fadeIn 4s forwards;
+}
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+.image img {
+animation: slideAndBounce 4s, bounce 3s 4s infinite; /* Delaying the bounce animation */
+}
+
+@keyframes slideAndBounce {
+from {
+    opacity: 0;
+    transform: translateX(50%);
+}
+to {
+    opacity: 1;
+    transform: translateX(0%);
+}
+}
+
+@keyframes bounce {
+0%, 100% {
+    transform: translateX(0); /* Start and end at the same position */
+}
+50% {
+    transform: translateX(30px); /* Bounce effect */
+}
+}
+
+
+/* <!-- ABUOT ME CONTENT --> */
+#content2{
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.container-about{
+    background-color: #191d2b;
+}
+.main-title{
+    margin-top: 7%;
+    font-family: "Limited" !important;
+    display: inline-flex;
+    position: absolute;
+    margin-left: 38%;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+@font-face {
+    font-family: limited;
+    src: url(Chopsic.otf);
+}
+
+.text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #333;
+}
+
+.overlay1 {
+      z-index: 0;
+      font-size: 40px;
+      opacity: 0.5;
+      white-space: nowrap;
+      font-size: 79px;
+}
+
+.overlay2 {
+      z-index: 5;
+      font-weight: bolder;
+      color: floralwhite;
+      font-size: 65px; /* Larger font size */
+}
+.about-container{
+    margin-top: 12% !important;
+}
+.about-left{
+   float: left;
+   width: 40%;
+   margin-right: 4%;
+   
+}
+.about-right{
+   float: left;
+   width: 50%;
+}
+.about-left h4{
+    color: #FFFFFF;
+    font-size: 32px;
+    font-family:sans-serif;
+}
+.about-left p{
+    font-size: 17px;
+    margin-top: 18px;
+    font-family: candy;
+    line-height: 21px;
+    letter-spacing: 1.5px;
+}
+@font-face {
+    font-family: "candy";
+    src: url(Classyvogueregular.ttf);
+}
+.btn-con11 {
+  border-radius: 50px;
+  padding: 0.1rem;
+  width: 200px;
+  padding-right: 0px;
+  margin-top: 10px;
+  color: white;
+  font-weight: 600;
+  border: 1px solid #27AE60;
+  align-self: flex-start;
+  align-items: center;
+  overflow-y: hidden;
+  text-decoration: none;
+  background: linear-gradient(to left, #191d2b 0%, #191d2b 50%, #27AE60 50%, #89b73d 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 1s ease;
+  
+}
+.btn-con11 i{
+    /* margin-left: 10px; */
+    background-color: #27AE60;
+    border-radius: 50%;
+    width: 45px;
+    height: 50px;
+    margin-left: 6.9%;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.btn-con11 a{
+    padding-left: 13px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.btn-con11:hover {
+    background-position: 0 0;
+    background-color: #27AE60 !important;
+}
+.social-links{margin-top: 3px;}
+.social-links i{
+    font-size: 30px;
+    padding: 0.4rem;
+}
+#fb{color: #4267B2; transition: all 0.5s ease; /* make hover ease in and our 1 sec delay */}
+#fb:hover{
+    transform: scale(1.1);
+    text-shadow: 1px 1px 2px black, 0 0 25px #4267B2, 0 0 5px #4267B2;
+}
+#ig{color: 	#E1306C; transition: all 0.5s ease; /* make hover ease in and our 1 sec delay */}
+#ig:hover{
+    transform: scale(1.1);
+    text-shadow: 1px 1px 2px black, 0 0 25px #E1306C, 0 0 5px #E1306C;
+}
+#sc{color: #FFFC00; transition: all 0.5s ease; /* make hover ease in and our 1 sec delay */}
+#sc:hover{
+    transform: scale(1.1);
+    text-shadow: 1px 1px 2px black, 0 0 25px #FFFC00, 0 0 5px #FFFC00;
+}
+#em{color: #ea4335; transition: all 0.5s ease; /* make hover ease in and our 1 sec delay */}
+#em:hover{
+    transform: scale(1.1);
+    text-shadow: 1px 1px 2px black, 0 0 25px #ea4335, 0 0 5px #ea4335;
+}
+.about-right{
+    /* margin-top: 7.5%; */
+    margin-left: 0%;
+}
+.about-box {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* Adjust the gap between boxes as needed */
+    row-gap: 20px;
+    width: 520px;
+    margin-left: 0%;
+    margin-top: 2%;
+}
+
+.about-box div {
+     /* Styling for each box */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #2a2e35;
+}
+.about-box i{
+    background-color: #2a2e35;
+    border-radius: 50%;
+    font-size: 55px;
+    color: #b2becd;
+    width: 90px;
+    height: 90px;
+    border: 5px solid #2e4b444f;
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease; /* make hover ease in and our 1 sec delay */
+}
+.box-1{
+    opacity: 0.8;
+    transition: all 1s ease !important; /* make hover ease in and our 1 sec delay */
+}
+
+.box-1:hover{
+    border-color: #27AE60;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 1;
+    transform: translateY(-10px) !important;
+}
+
+.box-1:hover i{
+    color: #27AE60;
+    border-color: #27AE60;
+    opacity: 1;
+}
+.box-1:hover h1{
+    color: #27AE60;
+    opacity: 1;
+}
+.box-1:hover h2{
+    color: #27AE60;
+    opacity: 1;
+}
+.about-box h2{
+    color: #6c7983;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: all 1s ease; /* make hover ease in and our 1 sec delay */
+}
+.about-box h1{
+    font-size: 1.2rem;
+    color: #6c7983;
+    letter-spacing: 2px;
+    transition: all 1s ease; /* make hover ease in and our 1 sec delay */
+    font-family: font-web;
+    white-space: nowrap;
+    margin-top: 14px;
+}
+@font-face {
+    font-family: font-web;
+    src: url(CELTG___.TTF);
+}
+.box-2{
+    opacity: 0.8;
+    transition: all 1s ease !important; /* make hover ease in and our 1 sec delay */
+}
+
+.box-2:hover{
+    border-color: #27AE60;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 1;
+    transform: translateY(-10px) !important;
+}
+
+.box-2:hover i{
+    color: #27AE60;
+    border-color: #27AE60;
+    opacity: 1;
+}
+.box-2:hover h1{
+    color: #27AE60;
+    opacity: 1;
+}
+.box-2:hover h2{
+    color: #27AE60;
+    opacity: 1;
+}
+.box-3{
+    opacity: 0.8;
+    transition: all 1s ease !important; /* make hover ease in and our 1 sec delay */
+}
+
+.box-3:hover{
+    border-color: #27AE60;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 1;
+    transform: translateY(-10px) !important;
+}
+
+.box-3:hover i{
+    color: #27AE60;
+    border-color: #27AE60;
+    opacity: 1;
+}
+.box-3:hover h1{
+    color: #27AE60;
+    opacity: 1;
+}
+.box-3:hover h2{
+    color: #27AE60;
+}
+
+.box-4{
+    opacity: 0.8;
+    transition: all 1s ease !important; /* make hover ease in and our 1 sec delay */
+}
+
+.box-4:hover{
+    border-color: #27AE60;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 1;
+    transform: translateY(-10px) !important;
+}
+
+.box-4:hover i{
+    color: #27AE60;
+    border-color: #27AE60;
+    opacity: 1;
+}
+.box-4:hover h1{
+    color: #27AE60;
+    opacity: 1;
+}
+.box-4:hover h2{
+    color: #27AE60;
+} 
+
+.ft-image img{
+   width: 130%;
+   margin-left: -18.5%;
+}
+
+
+/* SKILLS CONTAINER */
+.skills-container{
+   background-color: #fefefe;
+   margin-top: -3%;
+   width: 125%;
+   height: 480px;
+   color: #191d2b;
+   margin-left: -19%;
+}
+.skils-text{
+    text-align: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+.skils-text hr{
+    border: 2px solid rgb(51, 149, 188);
+    font-weight: 100 !important;
+    width: 70px;
+    margin-left: 45.5%;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+}
+.skills-p p{
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 5%;
+}
+.skills-progress-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+      grid-template-rows: repeat(3, 1fr); /* Three rows with a fixed height of 100px each */
+      gap: 30px; /* Adjust the gap between grid items as needed */
+      /* grid-template-rows: 50px; */
+      width: 500px; /* Set the desired width of the container */
+      margin: 0 auto; /* Center the container horizontally */
+}
+
+.skills-progress-box{
+      /* background-color: #3498db; Set a background color or style as needed  */
+      border-radius: 8px; /* Optional: Add rounded corners to the grid items */
+      width: 65%;
+      margin-top: 3.5%;
+      margin-left: 19%;
+}
+.htmltxt{
+    color: #191d2b;
+    font-size: 15px;
+    padding-left: 3px;
+}
+.percentage{float: right;}
+.progress-bar1{
+    height:11px;
+    width:450px;
+    background: rgb(51, 149, 188);
+    border: 0px solid gray;
+    border-radius: 30px;
+    background: #191d2b;
+    border-radius: 13px;
+}
+.progress-bar1:after {
+    content: '';
+    display: block;
+    background: #0a7388;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.progress-bar2{
+    height:11px;
+    width:450px;
+    background: rgb(51, 149, 188);
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: #191d2b;
+    border-radius: 13px;
+}
+.progress-bar2:after {
+    content: '';
+    display: block;
+    background: #0a7388;
+    width: 85%;
+    height: 100%;
+    border-radius: 10px;
+}
+.progress-bar3{
+    height: 11px;
+    width:450px;
+    background: rgb(51, 149, 188);
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: #191d2b;
+    border-radius: 13px;
+}
+.progress-bar3:after {
+    content: '';
+    display: block;
+    background: #0a7388;
+    width: 68%;
+    height: 100%;
+    border-radius: 10px;
+}
+.progress-bar4{
+    height:11px;
+    width:450px;
+    background: rgb(51, 149, 188);
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: #191d2b;
+    border-radius: 13px;
+}
+.progress-bar4:after {
+    content: '';
+    display: block;
+    background: #0a7388;
+    width: 65%;
+    height: 100%;
+    border-radius: 10px;
+}
+.progress-bar5{
+    height:11px;
+    width:450px;
+    background: rgb(51, 149, 188);
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: #191d2b;
+    border-radius: 13px;
+}
+.progress-bar5:after {
+    content: '';
+    display: block;
+    background: #0a7388;
+    width: 60%;
+    height: 100%;
+    border-radius: 10px;
+}
+.progress-bar6{
+    height:11px;
+    width:450px;
+    background: rgb(51, 149, 188);
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: #191d2b;
+    border-radius: 13px;
+}
+.progress-bar6:after {
+    content: '';
+    display: block;
+    background: #0a7388;
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+}
+.ft-image1{margin-top: -3.1%;}
+.ft-image1 img{
+
+    width: 130%;
+   margin-left: -18.5%;
+}
+
+/* RESUME CONTAINER */
+.resume-area{
+   margin-left: -22.9%;
+   width: max-content;
+   right: 0%;
+   color: #e5e5e5;
+}
+
+.resume-text{
+    font-size: 3rem;
+    margin-top: 2%;
+    margin-left: 40.5%;
+}
+.resume-text hr{
+    border: 2px solid rgb(51, 149, 188);
+    font-weight: 100 !important;
+    width: 120px;
+}
+.resume-p p{
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 20%;
+}
+.resume-grid {
+      margin-top: 3% !important;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+      gap: 10px; /* Adjust the gap between columns as needed */
+      width: 1000px; /* Set the desired width of the container */
+      margin: 0 auto; /* Center the container horizontally */
+      margin-left: 15%;
+    }
+
+.resume-grid-left, .resume-grid-right {
+      height: max-content; /* Set the desired height of each section */
+      border-radius: 8px; /* Optional: Add rounded corners to the sections */
+}
+.resume-grid-left{
+    width: 550px;
+}
+.resume-grid-right{ width: 520px;}
+/* vertical line css */
+.vertical-line {
+      position: relative;
+      width: 5px; /* Adjust the thickness of the line */
+      height: 295px; /* Adjust the height of the line */
+      background-color: #fefefe; /* Adjust the color of the line */
+      margin: 10px; /* Adjust the margin as needed */
+      background: linear-gradient(to bottom, #f7fcff, #1abc9c);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .vertical-line::before {
+      content: '';
+      position: absolute;
+      width: 15px; /* Adjust the width of the unique design */
+      height: 15px; /* Adjust the height of the unique design */
+      background-color: #fefefe; /* Adjust the color of the unique design */
+      border-radius: 50%; /* Make it a circle or adjust for other shapes */
+      top: 0%; /* Position it in the middle vertically */
+      left: 50%; /* Position it in the middle horizontally */
+      transform: translate(-50%, -50%); /* Center it precisely */
+    }
+
+.summary h1{
+    margin-bottom: 3.5%;
+    margin-left: 3.3%;
+    font-size: 36px;
+}
+.summary-area1 h2{
+    margin-top: -11px;
+    font-size: 24px;
+}
+.summary-area1{
+    margin-left: 12px;
+}
+.summary-area2{margin-top: -168%;}
+
+.summary-content{
+    display: inline-flex;
+    margin-left: 12px;
+}
+.summary-area1 p{margin-top: 2%;}
+.summary-area1 ul{margin-top: 15px; margin-left: 20px;}
+.summary-area1 li, ul{
+    list-style-type: circle;
+    /* list-style-position: inside; */
+    /* margin-top: 5px; */
+}
+.summary-area1 li{
+    margin: 10px 2px;
+}
+
+/* EDUCATION RESUME SECTION */
+.education{margin-top: 5%;}
+.education h1{
+    margin-bottom: 3.5%;
+    margin-left: 3.3%;
+}
+.date-area{
+    background-color: #e5e5e5;
+    color: #2a2e35;
+    height: 40px;
+    width: 140px;
+    margin-bottom: 3%;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     display: flex; /* This is important to centre the text */
+}
+.summary-area1 i{
+    font-size: 13px;
+}
+.vertical-line2 {
+      position: relative;
+      width: 5px; /* Adjust the thickness of the line */
+      height: 700px; /* Adjust the height of the line */
+      background-color: #fefefe; /* Adjust the color of the line */
+      margin: 10px; /* Adjust the margin as needed */
+      background: linear-gradient(to bottom, #f7fcff, #1abc9c);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .vertical-line2::before {
+      content: '';
+      position: absolute;
+      width: 15px; /* Adjust the width of the unique design */
+      height: 15px; /* Adjust the height of the unique design */
+      background-color: #fefefe; /* Adjust the color of the unique design */
+      border-radius: 50%; /* Make it a circle or adjust for other shapes */
+      top: 0%; /* Position it in the middle vertically */
+      left: 50%; /* Position it in the middle horizontally */
+      transform: translate(-50%, -50%); /* Center it precisely */
+    }
+.intermediate-h2{
+    margin-top: 6% !important;
+}
+
+.vertical-line3 {
+      position: relative;
+      width: 5px; /* Adjust the thickness of the line */
+      height: 1100px; /* Adjust the height of the line */
+      background-color: #fefefe; /* Adjust the color of the line */
+      margin: 10px; /* Adjust the margin as needed */
+      background: linear-gradient(to bottom, #f7fcff, #1abc9c);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .vertical-line3::before {
+      content: '';
+      position: absolute;
+      width: 15px; /* Adjust the width of the unique design */
+      height: 15px; /* Adjust the height of the unique design */
+      background-color: #fefefe; /* Adjust the color of the unique design */
+      border-radius: 50%; /* Make it a circle or adjust for other shapes */
+      top: 0%; /* Position it in the middle vertically */
+      left: 50%; /* Position it in the middle horizontally */
+      transform: translate(-50%, -50%); /* Center it precisely */
+    }
+.summary-area3{margin-top: 10% !important;}
+
+
+
+/* EXTRA ACTIVITIES */
+#activities{
+    margin-top:3%;
+    background-color: #191d2b; 
+}
+#content3{
+    margin-left: 15%;
+}
+.main-title1{
+    margin-top: 11%;
+    font-family: "Limited" !important;
+    display: inline-flex;
+    position: absolute;
+    margin-left: 38%;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+@font-face {
+    font-family: limited;
+    src: url(Chopsic.otf);
+}
+
+.text-overlay1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #333;
+}
+
+.overlay11 {
+      z-index: 0;
+      font-size: 40px;
+      opacity: 0.5;
+      white-space: nowrap;
+      font-size: 79px;
+}
+
+.overlay22 {
+      z-index: 5;
+      font-weight: bolder;
+      color: floralwhite;
+      font-size: 65px; /* Larger font size */
+}
+.extraactivities{
+    margin-top: 20%;
+    margin-right: 3%;
+}
+.activity-area{
+    /* background-color: floralwhite; */
+    width: 96%;
+    /* height: 500px; */
+    margin-top: 2%;
+    margin-bottom: 5% !important;
+}
+.activity-area {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Creates 3 columns with equal width */
+      gap: 30px; /* Adjust the gap between grid items */
+      padding: 15px;
+    }
+
+    .grid1 {
+      height: max-content; /* Set the height of each grid item */
+      background-color: rgb(250, 240, 240); /* Set the background color */
+      color: #191d2b;
+      -webkit-box-shadow: -1px 16px 19px 0px rgba(255,255,255,0.43);
+      -moz-box-shadow: -1px 16px 19px 0px rgba(255,255,255,0.43);
+       /* box-shadow: -1px 16px 19px 0px rgba(255,255,255,0.43); */
+       box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.621), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       transition: all 1s ease !important;
+       cursor: pointer;
+       opacity: 0.7;
+    }
+.grid1:hover{
+    transform: translateY(-15px) !important;
+    box-shadow: 0px 10px 20px 2px rgba(101, 204, 123, 0.51);
+    opacity: 1;
+}
+.grid1 img{
+    width: 330px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    }
+.grid1 h2{
+   margin-left: 5%;
+    margin-top: 2%;
+    margin-right: 5%;
+
+}
+.grid1 p{
+    font-size: 14px;
+    margin-left: 5%;
+    margin-top: -1%;
+    text-align: justify;
+    margin-right: 5%;
+}
+.grid1 h5{
+    font-weight: normal;
+    margin-left: 5%;
+    margin-top: 3.5%;
+    text-align: justify;
+    margin-right: 5%;
+}
+.grid1 button {
+  padding: 0.4rem;
+  width: 120px;
+  margin-left: 30%;
+  margin-top: 3%;
+  margin-bottom: 4% !important;
+  color: #27AE60;
+  font-weight: 1000;
+  border: 1px solid #27AE60;
+  overflow-y: hidden;
+  text-decoration: none;
+  background: linear-gradient(to left, white 0%, white 50%, #27AE60 50%, #89b73d 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 1s ease;
+  
+}
+.grid1 button:hover {
+    background-position: 0 0;
+    background-color: #27AE60 !important;
+    color: white !important;
+    cursor: pointer;
+}
+.grid1 a{text-decoration: none; color: #2a2e35;}
+
+
+/* Image AREA */
+#image{
+    background-color: white;
+    margin-top: 5%;
+}
+#image-section1{
+    margin-left: 15%;
+}
+.main-title11{
+    margin-top: 4%;
+    font-family: "Limited" !important;
+    display: inline-flex;
+    position: absolute;
+    margin-left: 38%;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+@font-face {
+    font-family: limited;
+    src: url(Chopsic.otf);
+}
+#main-gallery-grid{display: none;}
+#main-grid1{margin-top: 7% !important;}
+
+.gallery-grid { 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  align-items: start;
+  justify-items: center;
+  overflow: hidden;
+  margin-left: 8px;
+  margin-right: 20px;
+ 
+ }
+.gallery-grid img {
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+.gallery-grid img:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 2;
+  }
+  .gallery-grid2 { 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  align-items: start;
+  justify-items: center;
+  overflow: hidden;
+  margin-left: 8px;
+  margin-right: 8px;
+ 
+ }
+.gallery-grid2 img {
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+.gallery-grid2 img:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 2;
+  }
+
+.img-btn{
+    margin-top: 9%;
+    margin-left: 39%;
+}
+#image-section1 p{
+    margin-left: 24%;
+}
+
+#img-button{
+    padding: 1rem;
+  width: 120px;
+  margin-bottom: 4% !important;
+  color: white;
+  font-weight: 1000;
+  border: 1px solid #27AE60;
+  overflow-y: hidden;
+  text-decoration: none;
+  background: linear-gradient(to left, #191d2b 0%, #191d2b 50%, #27AE60 50%, #89b73d 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.4s ease;
+}
+#img-button:hover{
+    background-position: 0 0;
+    background-color: #27AE60 !important;
+    cursor: pointer;
+}
+.ft-image22 img{
+    width: 100%;
+    margin-top: -12.9%;
+    height: 200px;
+}
+.ft-image-bottom22 img{
+    width: 100%;
+    margin-bottom: -10.4%;
+    height: 150px;
+}
+
+
+/* Contact Area */
+#contact{
+    background-color: #191d2b;
+    width: 80%;
+    margin-left: 15%;
+    margin-right: 15% !important;
+    margin-top: 10%;
+}
+#contact-form{
+    margin-top: 21%;
+    display: block;
+}
+.main-title22{
+    margin-top: 12%;
+    font-family: "Limited" !important;
+    display: inline-flex;
+    position: absolute;
+    margin-left: 38%;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+@font-face {
+    font-family: limited;
+    src: url(Chopsic.otf);
+}
+input, textarea {
+    width: 95%;
+    padding: 8px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: #454e56;
+    border: none;
+    color: white;
+    transition: border-color 0.3s;
+}
+textarea::placeholder, input::placeholder{
+    font-size: 17px;
+}
+
+/* Styles for the input when in focus (clicked) */
+textarea:focus, input:focus {
+    outline: none;
+    border-style: none;
+    border: none;
+    border-color: none;
+    
+    box-shadow: inset 0px 0px 15px 10px rgba(0,0,0,0.5);
+-webkit-box-shadow: inset 0px 0px 15px 10px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 0px 0px 15px 10px rgba(0,0,0,0.5);
+}
+
+
+.contact-btn{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+.contact-btn button{
+    padding: 1rem;
+  width: 120px;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+  font-weight: 1000;
+  border: 1px solid #27AE60;
+  overflow-y: hidden;
+  text-decoration: none;
+  background: linear-gradient(to left, #191d2b 0%, #191d2b 50%, #27AE60 50%, #89b73d 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.4s ease;
+}
+.contact-btn button:hover{
+    background-position: 0 0;
+    background-color: #27AE60 !important;
+    cursor: pointer;
+}
+.contact-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Footer */
+.ft-image-last img{
+    width: 100%;
+    margin-bottom: -5%;
+}
+.footer-about{
+    position: absolute;
+    color: #191d2b;
+    margin-left: 38%;
+}
+.footer-about h2{
+  font-size: 19px;
+  text-align: center;
+}
+.footer-about h3{
+    font-size: 12px;
+    font-weight: 100;
+    text-align: center;
+}
+
+</style>
+<body>
+
+    <header id="header">
+        <!-- Buttons -->
+    <div class="nav-bar-button" id="navbar-main">
+        <div class="btn1" >
+            <a href="#home"><button class="button1 active" onclick="showContent(1)"><i class="fas fa-home"></i></button></a>
+        </div>
+        <div class="btn1" >
+            <a href="#about"><button class="button2" onclick="showContent(2)"><i class="fas fa-user"></i></button></a>
+        </div>
+        <div class="btn1" >
+            <a href="#activities"><button class="button3" onclick="showContent(3)"><i class="fa fa-trophy"></i></button></a>
+        </div>
+        <div class="btn1" >
+            <a href="#image"><button class="button4" onclick="showContent(4)"><i class="fa-regular fa-image"></i></button></a>
+        </div> 
+        <div class="btn1" >
+            <a href="#contact"><button class="button5" onclick="showContent(5)"><i class="fas fa-envelope-open"></i></button></a>
+        </div>
+    </div>
+        
+    </header>
+
+<!-- ======= Home Section ======= -->
+
+<section id="home">
+            <!-- Content -->
+    <div id="content1" class="content1">
+        
+            <div class="right-header">
+                <div class="h-shape"></div>
+                <div class="t-shape"></div> 
+                <div class="image">
+                    <div class="box-shape"></div>
+                    <img src="img/bg.png" alt="">
+                </div>
+            </div>
+            <div class="left-header">
+                <h1 class="name">
+                    <div class="text-area11">
+                    Hi, I'm <span class="text-span">Sandesh<br> Devkota.</span>
+                    </div>
+                    <div class="container-text">
+                        <h1><span class="text_1">A</h1>
+                            <span class="type hide-animation" id="startAfterDelay">
+                                <span>
+                                  <span>Web Designer.</span>
+                                  <span>Developer.</span>
+                                  <span>Front-end.</span>
+                                  <span>Web Designer.</span>
+                                </span>
+                              </span>
+                   </div>
+                </h1>
+                <p class="txt-p">
+                    Feel free to explore my portfolio to see examples of my work, showcasing a diverse range of projects that highlight my skills in web design, development, and UI/UX design. 
+                </p>
+                <br>
+                <div class="btn-con" id="cmd">
+                    <a href="./cv/CV SANDESH.pdf" download="Cv sandesh" class="main-btn" >
+                        <span class="btn-text">Download CV</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
+            </div>
+        
+    </div>
+</section>
+
+<!-- End Home -->
+<script>
+    
+</script>
+<main>
+    <section id="about" >
+        <!-- ABUOT ME CONTENT -->
+        <div id="content2" class="content2">
+            <div class="container-about">
+
+                <div class="main-title" data-aos="fade-up">
+                    <div class="text-overlay overlay1">ABOUT ME</div>
+                    <div class="text-overlay overlay2">ABOUT <span style="color: #27AE60;">ME</span></div>
+                </div><br>
+
+                <div class="about-container">
+
+                    <div class="about-left" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="330">
+                      <h4>Information About me</h4>
+                      <p>
+                          I am a passionate and versatile professional with expertise in web design, web development, and UI/UX design. With a keen eye for detail and a commitment to creating seamless and visually appealing digital experiences,
+                          <Br><br>
+                          As a passionate Web Developer, I thrive on crafting captivating and practical 
+                          websites. I'm driven by the art of combining aesthetics with functionality.<br><br> My goal is to elevate the online presence 
+                          of businesses and individuals by delivering websites that not only meet but 
+                          exceed expectations in both form and function.   
+                      </p>
+  
+                      <div class="social-links">
+                          <a href="https://www.facebook.com/sandesh.devkota.3" id="fb"><i class="fa-brands fa-facebook"></i></a>
+                          <a href="https://www.instagram.com/sandesh.dkt/?hl=en" id="ig"><i class="fa-brands fa-instagram"></i></a>
+                          <a href="https://www.snapchat.com/add/sandesh.dkt" id="sc"><i class="fa-brands fa-snapchat"></i></a>
+                          <a href="https://mail.google.com/mail/u/0/#inbox" id="em"><i class="fa-regular fa-envelope"></i></a>
+                      </div>
+  
+                      <div class="btn-con11">
+                          <a href="./cv/CV SANDESH.pdf" download="CV sandesh" class="main-btn">
+                              <span class="btn-text">Download CV</span>
+                              <span class="btn-icon"><i class="fas fa-download"></i></span>
+                          </a>
+                      </div>
+                    </div>
+  
+                    <div class="about-right">
+                      <div class="about-box">
+                           <Div class="box-1" data-aos="fade-left" data-aos-offset="310">
+                              <i class="fa-brands fa-sketch"></i>
+                               <h1>Web Design</h1>
+                           </Div>
+                           <Div class="box-2" data-aos="fade-left" data-aos-offset="310">
+                              <i class="fa-brands fa-connectdevelop"></i>
+                               <h1>Web Development</h1>
+                           </Div>
+                           <Div class="box-3" data-aos="fade-left" data-aos-offset="280">
+                              <!-- <i class="fa-solid fa-cloud"></i> -->
+                              <i class="fa-solid fa-server"></i>
+                               <h1>Web Hosting</h1>
+                           </Div>
+                           <Div class="box-4" data-aos="fade-left" data-aos-offset="280">
+                              <i class="fa-solid fa-tower-broadcast"></i>
+                               <h1>Marketing Services</h1>
+                           </Div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="ft-image" >
+                    <img src="./img/img-top.png">
+                </div>
+
+            <!-- SKILLS CONTAINER -->
+            <div class="skills-container">
+                    <div class="skils-text" data-aos="fade-up">SKILLS<hr></div>
+                <div class="skills-p" data-aos="flip-up" >
+                   <p>To become a web developer, we'll need a variety of hard and soft skills to succeed. Here are some of the most common skills to have in this role :</p>
+                </div>
+
+                <div class="skills-progress-box" data-aos="zoom-in-down" data-aos-duration="2000" data-aos-offset="280">
+                    <div class="pb1">
+                       <p class="htmltxt">HTML <span class="percentage">100%</span></p>
+                       <div class="progress-bar1"></div>
+                   </div>
+                   <div class="pb1">
+                       <p class="htmltxt">CSS <span class="percentage">85%</span></p>
+                       <div class="progress-bar2"></div>
+                   </div>
+                   <div class="pb1">
+                       <p class="htmltxt">JavaScript <span class="percentage">70%</span></p>
+                       <div class="progress-bar3"></div>
+                   </div>
+                   <div class="pb1">
+                       <p class="htmltxt">UX/UI <span class="percentage">87%</span></p>
+                       <div class="progress-bar4"></div>
+                   </div>
+                   <div class="pb1">
+                       <p class="htmltxt">Asp.Net <span class="percentage">60%</span></p>
+                       <div class="progress-bar5"></div>
+                   </div>
+                   <div class="pb1">
+                       <p class="htmltxt">PhotoSH<span class="percentage">40%</span></p>
+                       <div class="progress-bar6"></div>
+                   </div>
+               </div>
+               
+            </div>
+
+                <div class="ft-image1">
+                    <img src="./img/img-bottom.png">
+                </div>
+
+                <!-- RESUME CONTAINER -->
+                <div class="resume-area">
+
+                <div class="resume-text" data-aos="fade-up">RESUME<hr></div>
+                <div class="resume-p" data-aos="flip-up">
+                    <p>I hereby declare that all the details mentioned above are in accordance with the truth and fact as per my knowledge and I hold responsibility for the correctness of the above- mentioned particulars .</p>
+                 </div>
+
+                <div class="resume-grid">
+
+                  <!-- LEFT SIDE OF GRID -->
+                   <div class="resume-grid-left">
+                       <div class="summary" data-aos="fade-right" data-aos-offset="350">
+                           <h1>Summary</h1>
+                            <div class="summary-content">
+                                <div class="summary-area">
+                                    <div class="vertical-line"></div>
+                                </div>
+                                <div class="summary-area1">
+                                    <h2>SANDESH</h2>
+                                    <p>Highly creative and detail-oriented web designer with a passion for crafting visually appealing and intuitive user experiences. With a strong foundation in design principles and a keen eye for aesthetics, I specialize in translating concepts into polished, user-centric interfaces</p>
+                                    <ul class="list1">
+                                        <li>Pokhara, Nepal</li>
+                                        <li>+977 9816125889</li>
+                                        <li>sandesh.devkota90@gmail.com</li>
+                                    </ul>
+                                </div> 
+                            </div>
+                       </div>
+                       <div class="education" data-aos="fade-right" data-aos-offset="350">
+                           <h1>Education</h1>
+                        <div class="summary-content">
+                            <div class="summary-area">
+                                <div class="vertical-line2"></div>
+                            </div>
+                            <div class="summary-area1">
+                                <h2>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</h2>
+                                <div class="date-area">2000-2023</div>
+                                <i>Infomax college of IT & Management, Pokhara, NP</i>
+                                <p>The Bachelor of Science in Information Technology program offers a comprehensive, three-year curriculum focusing on advanced problem-solving methodologies and innovative approaches to technology-driven solutions. It equips students with the necessary skills to excel in a fast-paced, ever-evolving technological landscape.</p>
+                                
+                                <h2 class="intermediate-h2">INTERMEDIATE LEVEL</h2>
+                                <div class="date-area">2018-2000</div>
+                                <i>Prativa Secondary School, Pokhara, NP</i>
+                                <p>This level structured as a two-year program, introduces an organized studio-based approach emphasizing advanced problem-solving and strategic thinking. In this intermediate level, I offer optional mathematical components to enhance my adaptability and proficiency in creative problem-solving across various professional domains.</p>
+                            </div> 
+                        </div>
+                       </div>
+                   </div>
+
+              <!-- RIGHT SIDE OF GRID -->
+                <div class="resume-grid-right">
+                    
+                    <div class="summary" data-aos="fade-left" data-aos-offset="350">
+                        <h1>Experience</h1>
+                         <div class="summary-content">
+                             <div class="summary-area">
+                                 <div class="vertical-line3"></div>
+                             </div>
+                             <div class="summary-area1">
+                                 <h2>UI/UX Desing</h2>
+                                 <div class="date-area">2000-2023</div>
+                                 <i>Pokhara, Nepal, NP</i>
+                                 <p>Highly creative and detail-oriented web designer with a passion for crafting visually appealing and intuitive user experiences. With a strong foundation in design principles and a keen eye for aesthetics, I specialize in translating concepts into polished, user-centric interfaces</p>
+                                 <ul class="list1">
+                                     <li>Crafted intuitive user interfaces for web and mobile applications, adhering to best practices and usability standards, resulting in a 30% rise in user satisfaction.</li>
+                                     <li>Collaborated with teams in an Agile environment, optimizing user flows and wireframes to align with development sprints and deadlines.</li>
+                                     <li>Conducted A/B testing and usability studies, implementing iterative improvements that increased conversion rates by 20%.</li>
+                                 </ul>
+                              
+                                <div class="summary-area3">
+                                    <h2>FRONT-END</h2>
+                                    <div class="date-area">2000-2023</div>
+                                    <i>Pokhara, Nepal, NP</i>
+                                    <ul class="list2">
+                                       <li>Led the development and optimization of responsive web applications using HTML5, CSS3, and JavaScript, resulting in a 40% improvement in page load times.</li>
+                                       <li>Implemented responsive design techniques and cross-browser compatibility, improving the platform's accessibility and user reach.</li>
+                                       <li>Worked closely with senior developers to learn and apply best practices in front-end development, gaining proficiency in HTML, CSS, and JavaScript frameworks.</li>
+                                   </ul>
+                                 </div>
+                             </div>
+                            
+                         
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+                </div>
+
+            </div>
+        </div>
+    </section> 
+       
+    <section id="activities">
+              <!-- CONTENT 3 EXTRA ACTIVITIES SECTION -->
+    <div id="content3" class="content3">
+
+        <div class="container-activities" >
+
+            <div class="main-title1" data-aos="fade-up">
+                <div class="text-overlay overlay11">EXTRA ACTIVITIES</div>
+                <div class="text-overlay overlay22"><span  style="color: #27AE60;">EXTRA </span>ACTIVITIES</div>
+            </div>
+            <br>
+
+            <div class="extraactivities">
+                 <p data-aos="zoom-in">I have actively engaged in a variety of extracurricular activities, contributing to my personal and professional development. These experiences have not only enriched my skills but also provided opportunities for leadership, teamwork, and personal growth.</p>
+                 <div class="activity-area">
+                      <div class="grid1" data-aos="zoom-out" data-aos-offset="280">
+                           <img src="./img/uizard.jpg">
+                           <h2>Uizard.io</h2>
+                           <p><span style="color: #0a7388;">UI/UX design</span> / Oct, 2000</p>
+                           <h5>you've created a highly professional set of tools for UI/UX design on Uizard.io. Your design emphasizes a commitment to excellence in user interface and user experience.</h5>
+                           <button><a href="https://uizard.io/">More >></a></button>
+                      </div>
+                      <div class="grid1" data-aos="zoom-out" data-aos-offset="280">
+                          <iframe width="330" height="200" src="https://www.youtube.com/embed/MQjF14JX5yk" title="U12 player team nepal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                          <h2>2015 football festa </h2>
+                           <p><span style="color: #0a7388;">Korea event</span> / Aug, 2015</p>
+                           <h5>Nepal finished in second place in the Asian Youth Football Festa 2015 held in South Korea. The team finished a brilliant second among the 47 participating teams in the tournament.</h5>
+                           <button><a href="https://www.youtube.com/watch?v=UNKnzbt7bdA">More >></a></button>
+                      </div>
+                      <div class="grid1" data-aos="zoom-out" data-aos-offset="280">
+                           <img src="./img/js.png">
+                           <h2>JavaScript</h2>
+                           <p><span style="color: #0a7388;">Js</span> / Feb, 2001</p>
+                           <h5>Having utilized JavaScript since 2001, its enduring value in front-end development is indispensable to my design process. Its versatility empowers dynamic and interactive user interfaces. </h5>
+                           <button><a href="https://developer.mozilla.org/en-US/docs/Web/javascript">More >></a></button>
+                      </div>
+                    
+                      <div class="grid1" data-aos="zoom-out" data-aos-offset="280">
+                           <img src="./img/anfapage1.PNG">
+                           <h2>ANFA Book </h2>
+                           <p><span style="color: #0a7388;">National Event</span> / Aug, 2015</p>
+                           <h5>Representing the Nepal U12 national team, we recently participated in a tournament in Korea. Our team achieved a remarkable feat, securing victories in three consecutive games.</h5>
+                           <button><a href="https://www.the-anfa.com/">More >></a></button>
+                      </div>
+                      <div class="grid1" data-aos="zoom-out" data-aos-offset="280">
+                           <img src="./img/asp.PNG">
+                           <h2>.Net Projects</h2>
+                           <p><span style="color: #0a7388;">Assignments</span> / Sep, 2002</p>
+                           <h5>Successfully completing an ASP.NET project for a food ordering system as part of a college assignment has enriched my skills in both front-end design and backend development. </h5>
+                           <button><a href="https://dotnet.microsoft.com/en-us/">More >></a></button>
+                      </div>
+                      <div class="grid1" data-aos="zoom-out" data-aos-offset="280">
+                           <img src="./img/css.gif">
+                           <h2>Style Sheets</h2>
+                           <p><span style="color: #0a7388;">Css</span> / April, 2000</p>
+                           <h5>Engaging in pure CSS design and incorporating @keyframe animations showcases my proficiency in crafting visually appealing and dynamic web interfaces. </h5>
+                           <button><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">More >></a></button>
+                      </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    </section><br><br><br>
+
+    <section id="image" data-aos="fade-up">
+        <div class="ft-image22">
+            <img src="./img/img-top.png">
+        </div>
+            <!-- Content 4 IMAGE AREA -->
+    <div id="content4" class="content4">
+        <div class="container-image" id="image-section1">
+            <div class="main-title11" data-aos="fade-up">
+                <div class="text-overlay overlay1"><span style="color: #cccfdc;">Image Collection</span></div>
+                <div class="text-overlay overlay2"><span style="color: #27AE60;">Image</span>  <span style="color: #000000;">Collection</span> </div>
+            </div><br>
+             
+            <div class="img-btn" data-aos="zoom-out">
+                 <button class="button4" id="img-button" onclick="showgrid()">Unlock <i class="fa-solid fa-lock"></i></button>
+            </div>
+
+            <P style="color: #27AE60;">You need to enter correct Password to display images </P><br><br>
+
+           <div id="main-gallery-grid">
+                <div class="gallery-grid" id="main-grid1">
+                
+                    <img src="./img/image11.jpg" alt=" photo">
+                    <img src="./img/image1.jpg" alt=" photo">
+                    <img src="./img/image3.jpg" alt="photo">
+                    <img src="./img/image4.jpg" alt=" photo">
+                    <img src="./img/pic12345.jpg" alt=" photo">
+                    <img src="./img/image5.jpg" alt=" photo">
+                    <img src="./img/image7.jpg" alt="photo">
+                    <img src="./img/image9.jpg" alt=" photo">
+                    <img src="./img/image6.jpg" alt=" photo">   
+                    <img src="./img/image10.jpg" alt=" photo"> 
+                </div>
+
+                <div class="gallery-grid2" id="main-grid1">
+                
+                    <img src="" alt=" photo">
+                    <img src="" alt=" photo">
+                    <img src="" alt="photo">
+                    <img src="" alt=" photo">
+                    <img src="" alt=" photo">
+                    <img src="" alt=" photo">
+                    <img src="" alt="photo">
+                    <img src="" alt=" photo">
+                    <img src="" alt=" photo">   
+                    <img src="" alt=" photo"> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ft-image-bottom22">
+        <img src="./img/img-bottom.png">
+    </div>
+    </section>
+
+    <section id="contact">
+           <!-- Content 5 Contact SECTION -->
+    <div id="content5" class="content5">
+        <div class="container-contact">
+            <div class="main-title22" data-aos="fade-up">
+                <div class="text-overlay overlay1">Conatact Me</div>
+                <div class="text-overlay overlay2">Contact <span style="color: #27AE60;">Me</span> </div>
+            </div><br>
+
+            <form id="contact-form"  data-aos="zoom-out-up" data-aos-offset="370">
+                
+                <input type="text" id="name" placeholder="YOUR NAME" name="name" required>
+        
+                
+                <input type="email" id="email" placeholder="YOUR EMAIL" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        
+                
+                <input type="text" id="subject" placeholder="SUBJECT" name="subject" required>
+        
+                
+                <textarea id="message" name="message" placeholder="ENTRE MESSAGES..." rows="8" required></textarea>
+                 
+                <div class="contact-btn">
+                    <button id="sumbitbtn">Submit</button>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/sandesh.devkota.3" id="fb"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/sandesh.dkt/?hl=en" id="ig"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.snapchat.com/add/sandesh.dkt" id="sc"><i class="fa-brands fa-snapchat"></i></a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox" id="em"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <button><a href="./cv/CV SANDESH.pdf" download="CV SANDESH">Download CV</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </section>
+
+
+    <div class="ft-image-last">
+        <img src="./img/img-top.png">
+    </div>
+    <div class="footer-about">
+        <h2>© Copyright. All Rights Reserved</h2>
+        <h3>Designed by BootstrapMade</h3>
+    </div>
+</main>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset:135,
+            duration: 1000,
+        });
+      </script>
+
+ 
+<script src="./js/app.js"></script>
+<script src="./js/animation.js"></script>
+<script src="./js/lock.js"></script>
+</body>
+</html>
