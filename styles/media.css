@@ -131,8 +131,9 @@
 
 
 /* Macbook  */
+/* Macbook  */
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1280px) {
   /* Add specific styles for MacBook view here */
   #header{
     overflow-x: hidden !important;
@@ -150,11 +151,12 @@
     overflow-x: hidden !important;
     overflow-y: hidden !important;
     flex-direction: column !important;
-    height: 80% !important;
+    height: 85% !important;
     width: 200px !important; 
     position: fixed;
     z-index: 9999 !important;
   }
+
   
   #content1{
 
@@ -177,7 +179,7 @@
   position: absolute;
    width: 0;
    height: 0;
-   margin-top: 18.3%;
+   margin-top: 19.5%;
    margin-left: 52%;
    border-left: 450px solid transparent;
    border-right: 450px solid transparent;
@@ -190,7 +192,7 @@
   background-color: #313336;
   width: 450px;
   height: 400px;
-  top: 24%;
+  top: 30%;
   left: 60%;
   justify-content: center;
   border-radius: 15%;
@@ -200,12 +202,12 @@
   .image img{
     position:absolute;
     height: 700px;
-    top: -9.4%;
-    left: 53.4%;
+    top: -3.4%;
+    left: 50.4%;
     }
     /* style for text */
     .left-header{
     margin-left: 2%;
-    margin-top: 18%;
+    margin-top: 25%;
     }
 }
