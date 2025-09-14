@@ -303,6 +303,88 @@
                 gap: 16px;
             }
         }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .skill-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .skill {
+            margin-bottom: 18px;
+        }
+
+        .skill span {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .progress-bar {
+            margin-top: 8px;
+            height: 10px;
+            border-radius: 10px;
+            background: #e0e0e0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.8s ease-in-out;
+        }
+
+        /* Levels */
+        .beginner {
+            width: 40%;
+            background: #000;
+        }
+
+        .intermediate {
+            width: 70%;
+            background: #444;
+        }
+
+        .advanced {
+            width: 90%;
+            background: #444;
+        }
+
+        .level-text {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .advanced-text {
+            color: #444;
+        }
     </style>
 </head>
 
@@ -464,15 +546,17 @@
 
                     <div class="home-para">
                         <div class="para-icon">
-                            <i class='bxr  bx-dashboard'></i>
+                            <i class="fa-solid fa-grip"></i>
+                            <i class="fa-solid fa-table"></i>
                             <i class='bx bxl-javascript'></i>
                             <i class='bx bxl-php'></i>
                         </div>
                         <div class="para-desc">
                             <p class="txt-p">
-                                Feel free to explore my portfolio to see examples of my work, showcasing a diverse range
-                                of projects that highlight my skills in web design, development and Data
-                                Analysis/Dashboard.
+                                I’m a passionate Web Developer and Data Analyst with experience in creating responsive
+                                websites, developing robust applications, and building insightful dashboards. My
+                                portfolio showcases a diverse range of projects that highlight my expertise in web
+                                design, development, and business intelligence.
                             </p>
                         </div>
                     </div>
@@ -488,7 +572,10 @@
 
                 <div class="home-right-container">
                     <!--                     <img src="./img/homepicsvg.svg"> -->
-                    <img src="./img/Sandesh_Devkota.png">
+                    <!-- <img src="./img/Sandesh_Devkota.png"> -->
+                    <img src="./img/Sandesh_Devkota.png" alt="Sandesh Devkota"
+                        style=" border-radius:50%; box-shadow:0px 4px 15px rgba(0,0,0,0.2);">
+
                 </div>
 
             </div>
@@ -700,82 +787,13 @@
                     </div>
                 </div> -->
                 <!-- SKILLS SECTION START -->
-                <div class="skills-area">
-                    <div class="skills-title">
-                        <h1 data-aos="fade-up">My Technical Level</h1>
-                        <h3 class="skills-txt1" data-aos="fade-up"><span class="hr-line-about"></span>Skills</h3>
-                    </div>
 
-                    <p data-aos="fade-up">
-                        A balanced mix of web development and business-intelligence tools I use to deliver projects.
-                    </p>
-
-                    <div class="skills-main-box">
-                        <!-- Web Development -->
-                        <div class="skills-box1" data-aos="fade-right">
-                            <h2>Web Development</h2>
-                            <div class="skill-bar">
-                                <p>HTML & CSS <span>90%</span></p>
-                                <div class="bar">
-                                    <div class="fill" style="width:90%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-bar">
-                                <p>JavaScript & Bootstrap <span>70%</span></p>
-                                <div class="bar">
-                                    <div class="fill" style="width:70%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-bar">
-                                <p>PHP & MySQL <span>65%</span></p>
-                                <div class="bar">
-                                    <div class="fill" style="width:65%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-bar">
-                                <p>Git & Deployment <span>60%</span></p>
-                                <div class="bar">
-                                    <div class="fill" style="width:60%"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Data & BI -->
-                        <div class="skills-box1" data-aos="fade-left">
-                            <h2>Data & Business Intelligence</h2>
-                            <div class="skill-bar">
-                                <p>Excel <span>80%</span></p>
-                                <div class="bar">
-                                    <div class="fill" style="width:80%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-bar">
-                                <p>SQL <span>75%</span></p>
-                                <div class="bar">
-                                    <div class="fill" style="width:75%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-bar">
-                                <p>Power BI <span>70%</span></p>
-                                <div class="bar">
-                                    <div class="fill" style="width:70%"></div>
-                                </div>
-                            </div>
-                            <div class="skill-bar">
-                                <p>Data cleaning & ETL <span>72%</span></p>
-                                <div class="bar">
-                                    <div class="fill" style="width:72%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!-- SKILLS SECTION END -->
 
 
                 <!-- RESUME AREA MAIN AREA RESUME -->
 
-                <div class="resume-area">
+                <!-- <div class="resume-area">
                     <div class="resume-title">
                         <h1 data-aos="fade-up">Path of Accomplishments</h1>
                         <h3 class="resume-txt1" data-aos="fade-up"><span class="hr-line-resume"></span>Resume</h3>
@@ -950,7 +968,7 @@
 
                     </div>
 
-                </div>
+                </div> -->
 
 
             </div>
@@ -962,12 +980,13 @@
             <div id="portfolio1" class="container">
                 <div class="main-portfolio-txt">
                     <h1 data-aos="fade-up">Visual Chapters Unfolded</h1>
-                    <h3 data-aos="fade-up"><span>My </span>Porject</h3>
+                    <h3 data-aos="fade-up"><span>My </span>Projects</h3>
                 </div>
- 
-                <p data-aos="fade-left" class="lead" style="color: #cacbcc;">Each project includes goals, role, technologies and outcomes. Screenshots/demos are
+
+                <p data-aos="fade-left" class="lead" style="color: #cacbcc;">Each project includes goals, role,
+                    technologies and outcomes. Screenshots/demos are
                     recommended for stronger impact.</p>
-        
+
                 <div class="projects-grid">
 
 
@@ -1013,8 +1032,9 @@
                                 Ordering and Feedbacks.</p>
                             <p><strong>Technologies:</strong> PHP, MySQL, jQuery</p>
                             <p><strong>Role:</strong> Full-stack Developer</p>
-                            <div class="project-actions"><a href="#" class="btn">View Demo</a><a href="https://github.com/sandeshdevkota/Food-Ordering-system"
-                                    class="small">GitHub Source</a></div>
+                            <div class="project-actions"><a href="#" class="btn">View Demo</a><a
+                                    href="https://github.com/sandeshdevkota/Food-Ordering-system" class="small">GitHub
+                                    Source</a></div>
                         </div>
                     </article>
 
@@ -1025,6 +1045,83 @@
                 </div>
             </div>
         </section>
+
+
+        <section id="Skills-1">
+            <div class="main-portfolio-txt">
+                <h1 data-aos="fade-up">My Technical Level</h1>
+                <h3 data-aos="fade-up"><span>My </span>Skills</h3>
+            </div>
+
+            <div class="skills-container">
+                <!-- Web Development -->
+                <div class="skill-card" data-aos="fade-right">
+                    <h3>Web Development</h3>
+
+                    <div class="skill">
+                        <span>HTML & CSS <span class="level-text advanced-text">Advanced</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill advanced"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>JavaScript & Bootstrap <span class="level-text">Intermediate</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill intermediate"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>PHP & MySQL <span class="level-text">Intermediate</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill intermediate"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Git & Deployment <span class="level-text">Beginner</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill beginner"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & BI -->
+                <div class="skill-card" data-aos="fade-left">
+                    <h3>Data & Business Intelligence</h3>
+
+                    <div class="skill">
+                        <span>Excel <span class="level-text advanced-text">Advanced</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill advanced"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>SQL <span class="level-text">Intermediate</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill intermediate"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Power BI <span class="level-text">Intermediate</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill intermediate"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Data Cleaning & ETL <span class="level-text">Intermediate</span></span>
+                        <div class="progress-bar">
+                            <div class="progress-fill intermediate"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
         <section id="image" data-aos="flip-down" data-aos-offset="300" duration="3000">
@@ -1350,10 +1447,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
